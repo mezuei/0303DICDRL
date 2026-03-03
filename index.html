@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ting Wei Chang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cover-image"></div>
+    <div class="page-container">
+        <div class="header">
+            <div class="icon-container">
+                👨‍💻
+            </div>
+            <h1>Ting Wei Chang</h1>
+            <p class="subtitle">Welcome to my personal workspace, an aesthetic Notion-inspired site.</p>
+        </div>
+        
+        <div class="clock-card">
+            <span>🕒 Current Time: </span>&nbsp;<span id="current-time"></span>
+        </div>
+
+        <div class="content-grid">
+            <div class="card">
+                <h3>About Me</h3>
+                <p>Hello! I am Ting Wei Chang. I'm passionate about building elegant, functional, and minimal user interfaces.</p>
+            </div>
+            <div class="card">
+                <h3>Projects</h3>
+                <p>Discover some of my recent work, side projects, and open-source contributions here.</p>
+            </div>
+            <div class="card">
+                <h3>Essays & Writing</h3>
+                <p>Thoughts on software engineering, design, and continuous learning.</p>
+            </div>
+            <div class="card">
+                <h3>Connect</h3>
+                <p>Reach out to me on Twitter, LinkedIn, or via Email. Always open to new opportunities.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function updateTime() {
+            const timeElement = document.getElementById('current-time');
+            const now = new Date();
+            // Format time dynamically
+            timeElement.textContent = now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
+        }
+        setInterval(updateTime, 1000);
+        updateTime(); // initial call
+    </script>
+</body>
+</html>
